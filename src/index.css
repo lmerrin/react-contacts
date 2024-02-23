@@ -1,8 +1,41 @@
 @import "normalize.css";
 
 #root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 100vh;
   min-width: 100vw;
-  background: rgb(213,255,0);
-background: linear-gradient(90deg, rgba(213,255,0,1) 0%, rgba(250,255,145,0.413624824929972) 50%, rgba(213,255,0,1) 100%);
+  background: rgb(213, 255, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(213, 255, 0, 1) 0%,
+    rgba(250, 255, 145, 0.413624824929972) 50%,
+    rgba(213, 255, 0, 1) 100%
+  );
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.5rem;
+  margin: 8px 0px;
+}
+
+.contact-card {
+  text-align: center; 
+  background-color: #ffffff; 
+  border-radius: 8px; /* Rounded corners for the card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  padding: 20px; 
+  width: 300px; 
+  height: 250px; 
 }
