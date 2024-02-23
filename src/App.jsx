@@ -1,18 +1,15 @@
 import { useState } from "react";
 import "./App.css";
-import ContactCard from "./components/ContactCard/ContactCard";
+import ContactList from "./components/ContactList/ContactList";
+import dummyContacts from './contacts.js'
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [contacts, setContacts] = useState(dummyContacts);
 
   return (
     <>
-     <h1>React Contacts</h1>
-      <ContactCard 
-        name="Jenny Smith"
-        phone="808-867-5309"
-        e-mail="jenny@gmail.com"
-        />
+      <h1>React Contacts</h1>
+      <ContactList contacts={contacts} />
     </>
   );
 }
