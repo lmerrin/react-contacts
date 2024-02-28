@@ -1,4 +1,3 @@
-import React from "react";
 import "./ContactCard.css";
 
 export default function ContactCard({ name, phone, email }) {
