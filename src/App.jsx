@@ -15,11 +15,12 @@ function App() {
     <>
       <h1>React Contacts</h1>
 
-      <form>
+      <form className="form-container">
         <label>
           First Name:{" "}
           <input
             type="text"
+            className="form-input"
             onChange={(event) => {
               const value = event.target.value;
               setFirstName(value);
@@ -31,6 +32,7 @@ function App() {
           Last Name:{" "}
           <input
             type="text"
+            className="form-input"
             onChange={(event) => {
               const value = event.target.value;
               setLastName(value);
@@ -57,6 +59,7 @@ function App() {
               /\d/,
             ]}
             guide={true}
+            className="form-input"
             onChange={(event) => {
               const value = event.target.value;
               setPhoneNumber(value);
@@ -68,6 +71,7 @@ function App() {
           Email Address:{" "}
           <input
             type="email"
+            className="form-input"
             pattern=".+@example\.com"
             onChange={(event) => {
               const value = event.target.value;
@@ -78,6 +82,7 @@ function App() {
 
         <button
           type="submit"
+          className="form-buttom"
           onClick={(event) => {
             event.preventDefault();
             const newContact = {
@@ -86,9 +91,7 @@ function App() {
               phoneNumber,
               email,
             };
-            const updatedContacts = [
-              ...contacts, newContact
-            ]; 
+            const updatedContacts = [...contacts, newContact];
             setContacts(updatedContacts);
             console.log("Submit clicked!");
           }}
