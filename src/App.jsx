@@ -10,8 +10,6 @@ function App() {
   const [lastName, setLastName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState(" ");
   const [email, setEmail] = useState(" ");
-  const newContact = { firstName, lastName, phone: phoneNumber, email };
-
 
   return (
     <>
@@ -82,6 +80,16 @@ function App() {
           type="submit"
           onClick={(event) => {
             event.preventDefault();
+            const newContact = {
+              firstName,
+              lastName,
+              phoneNumber,
+              email,
+            };
+            const updatedContacts = [
+              ...contacts, newContact
+            ]; 
+            setContacts(updatedContacts);
             console.log("Submit clicked!");
           }}
         >

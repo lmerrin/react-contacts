@@ -9,9 +9,9 @@ export default function ContactList({contacts}) {
           return (
             <ContactCard
               key={contact.phoneNumber}
-              name={`${contact.firstName} ${contacts[0].lastName}`}
+              name={`${contact.firstName} ${contact.lastName}`}
               phone={contact.phoneNumber}
-              e-mail={contact.email}
+              email={contact.email}
             />
           );
         })}
