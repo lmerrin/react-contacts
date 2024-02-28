@@ -2,7 +2,7 @@ import "./ContactForm.css";
 import { useState } from "react";
 import MaskedInput from "react-text-mask";
 
-export default function ContactForm(onFormSubmissionHandler) {
+export default function ContactForm({ onFormSubmissionHandler }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState(" ");
