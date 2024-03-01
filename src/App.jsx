@@ -25,7 +25,15 @@ function App() {
         }}
       />
 
-      <ContactList contacts={contacts} />
+      <ContactList
+        contacts={contacts}
+        onCardDeleteClicked={(phoneNumber) => {
+          const updatedContacts = contacts.filter((contact) => {
+            return contact.phoneNumber !== phoneNumber;
+          })
+          setContacts(updatedContacts);
+        }}
+      />
     </>
   );
 }
