@@ -4,7 +4,6 @@ import ContactList from "./components/ContactList/ContactList";
 import dummyContacts from "./contacts.js";
 import ContactForm from "./components/ContactForm/ContactForm.jsx";
 
-
 function App() {
   const [contacts, setContacts] = useState(dummyContacts);
 
@@ -14,6 +13,13 @@ function App() {
 
       <ContactForm
         onFormSubmissionHandler={(newContact) => {
+          const isEmailOrPhoneInContacts = contacts.some((contact) => {
+            return (
+              contact.phoneNumber === newContact.phoneNumber ||
+              contact.email === newContact.email
+            );
+          });
+          if (isEmailOrPhoneInContacts) return;
           const updatedContacts = [...contacts, newContact];
           setContacts(updatedContacts);
         }}
